@@ -13,20 +13,22 @@ function Counter(props) {
   };
 
   return (
-    <div className="container">
-      <p>starting number from parent component: {props.numberFromApp}</p>
+    <div className="mycontainer">
+      <p className="text-primary">
+        starting number from parent component: {props.numberFromApp}
+      </p>
       <p className="mynum">{value}</p>
       <div className="buttons-div">
-        <button className="button" onClick={increase}>
-          increase
+        <button className="btn btn-success mx-2" onClick={increase}>
+          increase +
         </button>
-        <button className="button" onClick={decrease}>
-          decrease
+        <button className="btn btn-danger mx-2" onClick={decrease}>
+          decrease -
         </button>
       </div>
-      <h4 className="warning">
+      <h6 className="warning mt-3">
         {value < 0 ? "WARNING, you are now below zero" : ""}
-      </h4>
+      </h6>
     </div>
   );
 }
